@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Heap Visualizer</title>
+    <link rel="stylesheet" href="Heap.css">
+</head>
+    
+<body>
+
+    <!-- Main Application Container -->
+    <div class="app-container">
+        <header>
+            <h1>Interactive Heap Visualizer</h1>
+        </header>
+        <div class="heap-controls">
+            <input type="number" id="nodeInput" placeholder="Enter single value" />
+            <button id="addNode">Insert Node</button>
+            <input type="text" id="arrayInput" placeholder="Enter array (e.g. 1,2,3)" />
+            <button id="addArray">Insert Array</button>
+            <button id="toggleHeapType">Switch to Max-Heap</button>
+            <button id="undoAction" disabled>Undo</button>
+            <button id="redoAction" disabled>Redo</button>
+        </div>
+        <canvas id="visualCanvas" width="800" height="600"></canvas>
+    </div>
+
+    <script src="Heap.js"></script>
+</body>
+</html>

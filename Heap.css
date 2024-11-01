@@ -1,0 +1,148 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #eef2f7;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Main Application Container */
+.app-container {
+    padding-top: 30px;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    background: #ffffff;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 20px;
+    animation: fadeIn 1s ease;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header Styles */
+header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 15px;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+/* Slide-in Animation for Header */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Controls Section */
+.heap-controls {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Input Fields */
+input {
+    padding: 12px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 240px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border 0.3s ease;
+}
+
+/* Focus animation for input */
+input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 8px rgba(59, 130, 246, 0.5);
+    outline: none;
+    animation: pulse 1s infinite;
+}
+
+/* Button Styling */
+button {
+    padding: 12px 25px;
+    font-size: 1rem;
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+/* Hover and Active Animations for Buttons */
+button:hover {
+    background-color: #2563eb;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.5);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Canvas for Visuals */
+#visualCanvas {
+    border: 2px solid #aaa;
+    background-color: #fff;
+    margin-top: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+    width: 100%; /* Make the canvas responsive */
+    max-width: 800px; /* Set a max width for larger screens */
+    height: auto; /* Allow height to adjust based on width */
+}
+
+/* Border Animation for Canvas */
+#visualCanvas:hover {
+    border-color: #3b82f6;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2rem; /* Adjust header size on small screens */
+    }
+    .heap-controls {
+        flex-direction: column; /* Stack controls vertically */
+        gap: 10px;
+    }
+    button {
+        width: 100%; /* Make buttons full width on small screens */
+    }
+}
